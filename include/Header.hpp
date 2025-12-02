@@ -1,3 +1,7 @@
+
+#ifdef DEFINITIONS_HPP
+#define DEFINITIONS_HPP
+
 #include <iostream>
 
 #include <utility>
@@ -15,13 +19,13 @@
 #include <map>
 
 
-#include <math.h>
-#include <stdint.h>
-#include <stdio.h>
+#include <cmath>
+#include <cstddef>
+#include <cstdio>
 #include <cstdlib>
 #include <cstring>
-#include <assert.h>
-#include <time.h>
+#include <cassert>
+#include <ctime>
 #include <cstdio>
 #include <iomanip>
 #include <iomanip>
@@ -29,3 +33,32 @@
 #include <thread>
 #include <chrono>
 #include <fstream>
+
+
+
+constexpr int  BTREE_SEARCH_NOT_FOUND -1
+constexpr int  BPTREE_MAX_FILE_PATH_SIZE 1000
+constexpr int  BTREE_MAX_KEYS_PER_NODE 50
+
+
+constexpr int ERROR 0
+constexpr int SUCCESS 1
+
+
+constexpr int VARCHAR 100
+constexpr int MAX_ATTR 30
+constexpr int MAX_NAME 50
+
+
+#define MAX_NODE 30
+
+//available
+extern void create();
+extern int search_table(char tab_name[]);
+extern void insert();
+extern void search();
+extern void show_table();
+extern int insert_record(int primary_key, int record_num);
+
+
+#endif
