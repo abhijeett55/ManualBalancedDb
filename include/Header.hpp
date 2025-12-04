@@ -32,6 +32,7 @@
 #include <numeric>
 #include <thread>
 #include <chrono>
+
 #include <fstream>
 
 
@@ -51,6 +52,30 @@ constexpr int MAX_NAME 50
 
 
 #define MAX_NODE 30
+using namespace std;
+
+struct col_details{
+    char col_name[20];
+    int type;
+    int size;
+};
+
+struct table {
+    int prefix[MAX_ATTR + 1];
+    col_details col[MAX_ATTR + 1];
+
+    //Attributes
+    int count = 0;
+    char name[20]; //name of table
+    int size;
+    int data_size;
+    int BLOCKSIZE;
+    FILE *fp;
+    void *blockbuf;
+    int rec_count; // no of entries in table
+
+};
+
 
 //available
 extern void create();
@@ -59,6 +84,7 @@ extern void insert();
 extern void search();
 extern void show_table();
 extern int insert_record(int primary_key, int record_num);
-
+extern FILE *open_file(char t_name[], char perm[]);
+extern int store_meta_data(struct table *t_ptr);
 
 #endif
