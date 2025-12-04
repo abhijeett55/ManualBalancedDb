@@ -13,7 +13,7 @@
 
 typedef struct {
     uint32 erk[32];  /* encryption round keys */
-    uint32 drk[32];
+    uint32 drk[32];  /* decryption round keys */
     int nr;           /* number of rounds */
 }
 
