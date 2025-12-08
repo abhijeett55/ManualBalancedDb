@@ -1,7 +1,7 @@
 #ifndef EXPR_HPP
 #define EXPR_HPP
 
-#include <cstdio>
+#include <cstdlib>
 #include <memory>
 #include <vector>
 
@@ -10,6 +10,16 @@ namespace sql {
     class SelectStatement;
 
     char* substr(const char* source, int from, int to);
+
+    enum ExprType {
+        kExprLiteralFloat,
+        kExprLiteralString,
+        kExprLiteralInt,
+        kExprStar,
+        //
+    }
+
+    typedef struct Expr Expr;
 
     struct Expr {
         enum OperatiorType  {
@@ -36,9 +46,25 @@ namespace sql {
             ISNULL,
             EXISTS
         };
+
+        Expr(ExprType type);
+
+        ~Expr();
+
+        ExprType type;
+
+        Expr* expr;
+
+
+
+
+
+
     };
 
 }
+
+
 
 
 
