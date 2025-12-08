@@ -24,23 +24,20 @@ namespace sql {
     struct Expr {
         enum OperatiorType  {
             NONE,
-
-
+            // Ternary 
             BETWEEN,
             CASE,
-
-
+            //Binary
             SIMPLE_OP,
             NOT_EQUALS,
             LESS_EQ,
             GREATER_EQ,
-
             LIKE,
             NOt_LIKE,
             AND,
             OR,
             IN,
-
+            //Unary
             NOT,
             UMINUS,
             ISNULL,
@@ -53,11 +50,22 @@ namespace sql {
 
         ExprType type;
 
-        Expr* expr;
+        Expr* expr1;
+        Expr* expr2;
+        std::vector<Expr1*>* exprList;
+        SelectStatement* select;
 
 
+        char* name;
+        char* table;
+        char* alias;
+        float fval;
+        int64_t ival1;
+        int64_t ival2;
 
-
+        OperatiorType opType;
+        char opChar;
+        bool distinct;
 
 
     };

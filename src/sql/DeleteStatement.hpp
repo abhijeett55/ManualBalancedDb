@@ -1,8 +1,10 @@
 #ifndef DELETESTATEMENT_HPP
 #define DELETESTATEMENT_HPP
 
+#include "SQLStatement.hpp"
+
 namespace sql {
-    struct DeleteStatement {
+    struct DeleteStatement : SQLStatement {
         DeleteStatement();
 
         virtual ~DeleteStatement();
