@@ -1,8 +1,8 @@
 #include "Header.hpp"
 
 // Balanced BTree
-class Btreenode;
-class BTree {
+class BPtreenode;
+class BPTree {
     private:
         int files_till_now, root_num;
         char tablename[BPTREE_MAX_FILE_PATH_SIZE];;
@@ -10,8 +10,8 @@ class BTree {
     void update_meta_deta();
 
 public:
-    BTree();
-    BTree(char tablename[]);
+    BPTree();
+    BPTree(char tablename[]);
 
     void read_node(int filenum, Btreenode& n);
     int insert_record(int primary_key, int record_num);

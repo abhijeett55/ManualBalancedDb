@@ -1,15 +1,15 @@
 #include "Btree.hpp"
 
 
-class Btreenode {
+class BPtreenode {
 private:
     bool leaf;
     std::vector<int> pointers;
     std::vector<int> keys;
     int next_node;
 public:
-    Btreenode();
-    Btreenode(bool makeleaf) {
+    BPtreenode();
+    BPtreenode(bool makeleaf) {
         leaf = makeleaf;
         next_node = -1;
     }
@@ -117,7 +117,7 @@ public:
     }
 
 
-    friend std::ofstream& operator<<(std::ofstream& os , const Btreenode& en) {
+    friend std::ofstream& operator<<(std::ofstream& os , const BPtreenode& en) {
         os << en.leaf <<" ";
         os << (int) en.keys.size() << " ";
 
@@ -136,7 +136,7 @@ public:
     }
 
 
-    friend std::ifstream& operator>>(std::ifstream& is, const Btreenode en) {
+    friend std::ifstream& operator>>(std::ifstream& is, const BPtreenode en) {
         int ts;
         is >> en.leaf;
         is >> ts;
@@ -155,7 +155,7 @@ public:
         return is;
     }
 
-    Btreenode& operator=(const Btreenode& en) {
+    Btreenode& operator=(const BPtreenode& en) {
         if(this!= &en) {
             leaf = en.leaf;
             keys.assign(en.keys.begin(), en.keys.end());
@@ -164,3 +164,7 @@ public:
         return *this;
     }
 };
+
+
+//
+

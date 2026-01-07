@@ -1,0 +1,17 @@
+cmake_minumum_required(VERSION 3.16)
+
+project(ManualBalancedDb LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_RFEQUIRED ON)
+
+add_excutuable(ManualBalancedDb
+    src/main.cpp
+    src/Insert.cpp
+    src/BTree.cpp
+    src/Create.cpp
+    src/Display.cpp
+    src/Helper.cpp
+    src/SQLParserResult.cpp
+    src/SQLParser
+    )
