@@ -1,12 +1,11 @@
-#ifndef SQLSTATEMENT_HPP
-#define SQLSTATEMENT_HPP
+#ifndef SQL_STATEMENT_HPP
+#define SQL_STATEMENT_HPP
 
 #include "Expr.hpp"
 #include <vector>
 
 
 namespace sql {
-
     enum StatementType {
         kStatementError,
         kStatementSelect,
@@ -30,7 +29,9 @@ namespace sql {
 
         virtual StatementType type() const;
     private:
-        StatementType type;
+            StatementType type;
     };
     
 }
+
+#endif

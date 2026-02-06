@@ -1,5 +1,5 @@
-#ifndef PREPARESTATEMENT_HPP
-#define PREPARESTATEMENT_HPP
+#ifndef PREPARE_STATEMENT_HPP
+#define PREPARE_STATEMENT_HPP
 
 // Pending
 #include "SQLStatement.hpp"
@@ -13,6 +13,7 @@ namespace sql {
 
 
         void setPlaceHolder(std::vector<void*>* ph);
+        
         char* name;
         SQLParserResult* query;
 

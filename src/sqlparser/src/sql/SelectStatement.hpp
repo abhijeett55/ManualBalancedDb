@@ -1,5 +1,5 @@
-#ifndef SELECTSTATEMENT_HPP
-#define SELECTSTATEMENT_HPP
+#ifndef SELECT_STATEMENT_HPP
+#define SELECT_STATEMENT_HPP
 
 #include "Table.hpp"
 #include "Expr.hpp"

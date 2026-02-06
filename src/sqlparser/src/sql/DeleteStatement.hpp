@@ -1,5 +1,5 @@
-#ifndef DELETESTATEMENT_HPP
-#define DELETESTATEMENT_HPP
+#ifndef DELETE_STATEMENT_HPP
+#define DELETE_STATEMENT_HPP
 
 #include "SQLStatement.hpp"
 

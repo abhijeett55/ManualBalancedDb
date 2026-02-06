@@ -1,17 +1,33 @@
+
 cmake_minumum_required(VERSION 3.16)
 
-project(ManualBalancedDb LANGUAGES CXX)
+#project name
+project(ManualBalancedDb)
 
+#use c++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_RFEQUIRED ON)
 
-add_excutuable(ManualBalancedDb
-    src/main.cpp
-    src/Insert.cpp
-    src/BTree.cpp
-    src/Create.cpp
-    src/Display.cpp
-    src/Helper.cpp
-    src/SQLParserResult.cpp
-    src/SQLParser
+file(GLOB_RECURSE SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
+)
+
+#Create executable
+add_executable(ManualBalancedDb ${SOURCES})
+
+
+#include directories
+target_include_directories(ManualBalancedDb PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+
+target_compile_options(ManualBalancedDb PRIVATE
+    -Wall
+    -Wextra
+)
+
+
+set_target_properties(ManualBalancedDb PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
     )

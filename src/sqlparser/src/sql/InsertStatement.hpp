@@ -1,7 +1,7 @@
-#ifndef INSERTSTATEMENT_HPP
-#define INSERTSTATEMENT_HPP
+#ifndef INSERT_STATEMENT_HPP
+#define INSERT_STATEMENT_HPP
 
-
+#include "SelectStatement.hpp"
 #include "SQLStatement.hpp"
 
 namespace sql {

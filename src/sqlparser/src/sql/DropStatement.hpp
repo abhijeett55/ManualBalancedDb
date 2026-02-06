@@ -1,5 +1,6 @@
-#ifndef DROPSTATEMENT_HPP
-#define DROPSTATEMENT_HPP
+#ifndef DROP_STATEMENT_HPP
+#define DROP_STATEMENT_HPP
+
 #include "SQLStatement.hpp"
 
 namespace sql {

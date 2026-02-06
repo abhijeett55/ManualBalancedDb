@@ -1,5 +1,5 @@
-#ifndef EXECUTESTATEMENT_HPP
-#define EXECUTESTATEMENT_HPP
+#ifndef EXECUTE_STATEMENT_HPP
+#define EXECUTE_STATEMENT_HPP
 
 #include "SQLStatement.hpp"
 

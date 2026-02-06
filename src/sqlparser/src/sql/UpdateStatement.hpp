@@ -1,5 +1,6 @@
-#ifndef UPDATESTATEMENT_HPP
-#define UPDATESTATEMENT_HPP
+#ifndef UPDATE_STATEMENT_HPP
+#define UPDATE_STATEMENT_HPP
+
 #include "SQLStatement.hpp"
 
 

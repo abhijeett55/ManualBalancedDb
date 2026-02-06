@@ -1,4 +1,4 @@
-# ManualDb
+# ManualBalancedDb
 
 #### A Relational database model, data storage based on Balanced tree indexing
 

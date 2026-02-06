@@ -1,7 +1,8 @@
-#ifndef IMPORTSTATEMENT_HPP
-#define IMPORTSTATEMENT_HPP
+#ifndef IMPORT_STATEMENT_HPP
+#define IMPORT_STATEMENT_HPP
 
 #include "SQLStatement.hpp"
+
 
 namespace sql {
     //Represents SQL Import Statements
