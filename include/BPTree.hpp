@@ -1,7 +1,7 @@
 #include "Header.hpp"
 
 // Balanced BTree
-class BPtreenode;
+class BPTreenode;
 class BPTree {
     private:
         int files_till_now, root_num;
@@ -13,8 +13,8 @@ public:
     BPTree();
     BPTree(char tablename[]);
 
-    void read_node(int filenum, Btreenode& n);
+    void read_node(int filenum, BPTreenode& n);
     int insert_record(int primary_key, int record_num);
-    Btreenode search_leaf(int primary_key);
+    BPTreenode search_leaf(int primary_key);
     int get_record(int primary_key);
 };
