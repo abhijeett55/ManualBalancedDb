@@ -165,6 +165,12 @@ public:
     }
 };
 
-
-//
-
+void BPTree:: write_node(int filenum, BPTreenode n) {
+    char *str;
+    str = (char *)malloc(sizeof(char)* BPTREE_MAX_FILE_PATH_SIZE);
+    sprintf(str,"table/%s/tree/tree%d.dat", tablename, filenum);
+    std::ofstream out_file(str, std::ofstream::binary | std::ofstream::out | std::ofstream::trunc);
+    free(str);
+    out_file<<n;
+    out_file.close();
+}
